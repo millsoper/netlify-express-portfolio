@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    link(rel="stylesheet" href="projects.css")
+  body
+    div(class="page-wrapper")
+      a(href="/" class="button home-button") < home
+      div(class="project-container")
+        div(class="project left wavy")
+          div(class="project-image" id="wavy")
+            include includes/images/radio.pug
+          div(class="project-text-box")
+            p
+              span(class="project-name") wavy :
+            | an audio visualizer using the HTML5 audio API
+            div(class="link-container")
+              a(class="button" href='http://millsoper.github.io/wavy/')
+                | live
+              a(class="button" href='https://github.com/millsoper/wavy')
+                | code
+        div(class="project right lines")
+          div(class="project-image") 
+            include includes/images/lines.pug
+          div(class="project-text-box")
+            p
+              span(class="project-name") floppy lines: 
+            | animating randomized paths without greensock
+            div(class="link-container")
+              a(class="button" href='https://floppy-lines.glitch.me')
+                | live
+              a(class="button" href='https://glitch.com/edit/#!/floppy-lines')
+                | code
+        div(class="project left mousetrap")
+          div(class="project-image" id="mousetrap")
+            include includes/images/cheese.pug
+          div(class="project-text-box")
+            p
+              span(class="project-name") mouse trap :
+            | experiments with cursor tracking
+            div(class="link-container")
+              a(href='https://mouse-trap.glitch.me')
+                | live
+              a(href='https://glitch.com/edit/#!/mouse-trap')
+                | code
+        div(class="project right starchart")
+          div(class="project-image" id="starchart")
+            include includes/images/starmap.pug
+          div(class="project-text-box")
+            p
+              span(class="project-name") star chart :
+            | an interactive star chart built with styled components and react hooks
+            div(class="link-container")
+              a(href='https://star-chart.glitch.me')
+                | live
+              a(href='https://glitch.com/edit/#!/star-chart')
+                | code
+        div(class="project left romanholiday")
+          div(class="project-image" id="romanholiday")
+            img(class="branch branch-left" src="https://cdn.glitch.com/fbfbe80c-5dab-43e8-81ab-0a353618a87d%2Folive-branch-left.svg?v=1574310158360")
+            img(class="branch branch-right" src="https://cdn.glitch.com/fbfbe80c-5dab-43e8-81ab-0a353618a87d%2Folive-branch-right.svg?v=1574310248524")
+          div(class="project-text-box")
+            p
+              span(class="project-name") roman holiday: 
+            | find the next ancient roman holiday via a node and express app
+            div(class="link-container")
+              a(href='https://roman-holiday.glitch.me')
+                | live
+              a(href='https://glitch.com/edit/#!/roman-holiday')
+                | code
+    footer
+      script(src="./lines.js" defer=true)
+      include includes/footer.pug

@@ -1,0 +1,145 @@
+* {
+  font-family: arial;
+  box-sizing: border-box;
+  color: #4e4e4e;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.button {
+  text-decoration: none;
+  color: #4e4e4e;
+  border-bottom: 2px solid gold;
+}
+
+.button:hover {
+  border-bottom: 2px solid goldenrod;
+}
+
+.link-container {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 12px;
+}
+
+.link-container a {
+  text-decoration: none;
+  color: #4e4e4e;
+  margin-right: 18px; 
+  border-bottom: 1px solid gold;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/********** resume **************/
+.skills {
+  
+}
+
+/********** home page ***********/
+
+.home-wrapper {
+  height:100vh;
+  width: 80vw;
+  max-width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lines {
+  position: absolute;
+  z-index: -1;
+  stroke-width: 3;
+}
+
+.title-block {
+  width: 60vw;
+  background-color: #fefefe;
+  height: 60vw;
+  max-width: 130px;
+  max-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-block .button {
+  margin-bottom: 8px;
+}
+/*  #one {
+  background-color: teal;
+}
+
+#two {
+  background: tomato;
+}
+
+#three {
+  background: hotpink;
+}
+
+#four {
+  background: darkturquoise;
+}
+
+#six {
+  background: goldenrod;
+} */
+
+.project {
+  display: flex;
+}
+
+.left {
+  justify-content: flex-end;
+}
+
+.right {
+  justify-content: flex-start;
+}
+
+.right .project-image {
+  top: 0;
+  right: 0;
+}
+
+.left .project-image {
+  top: 0;
+  left: 0;
+}
+
+/*  footer */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(min-width: 385px){
+  .page-wrapper {
+    width: 86vw;
+    margin: 20px auto;
+  }
+}
+
+@media(min-width: 620px){
+  .page-wrapper {
+    width: 82vw;
+    margin: 40px auto;
+    max-width: 646px;
+  }
+}

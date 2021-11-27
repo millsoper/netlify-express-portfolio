@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body
+    main
+      p(class="intro")
+        span is
+        span today
+        span an
+        span ancient
+        span roman
+        span holiday?
+      section(id="holiday-block")
+        p(id="date-preface")
+        div(class="holiday-name--container")
+          include includes/leftBranch.pug
+          h3(id="holiday-name") loading holiday
+          include includes/rightBranch.pug
+        p(id="holiday-description" class="description")
+    footer
+      include includes/footer.pug
+    script(src='client.js')

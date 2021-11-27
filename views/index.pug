@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+  body
+    div(class="home-wrapper")
+      include includes/images/lines.pug
+      div(class="title-block")
+        p I'm Mill
+        a(href="/projects" class="button") projects
+        a(href="/about" class="button") about
+    footer(class="footer")
+      include includes/footer.pug
+    script(src="./lines.js" defer=true)

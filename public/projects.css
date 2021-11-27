@@ -1,0 +1,405 @@
+/* mobile first -- this goes up to 385px screen width*/
+.project,
+.project-image,
+.project-text-box {
+  height: 70vw;
+  width: 70vw;
+  transition: all 200ms ease-in-out;
+}
+
+.home-button {
+  position: absolute;
+  align-self: start;
+  top: 0;
+  left: 0;
+}
+
+.project-image {
+  overflow: hidden;
+}
+
+.project {
+  overflow: hidden;
+}
+
+.project-text-box {
+  box-sizing: border-box;
+  padding: 12px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-text-box p {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.project-name {
+  padding: 1px;
+  background: lightgoldenrodyellow;
+}
+
+.project-image {
+  position: absolute;
+  z-index: 10;
+  background: #cecec3;
+}
+
+.project-image svg {
+  width: 100%;
+  height: 100%;
+  stroke: #4e4e4e;
+  stroke-width: 2px;
+}
+
+.project {
+  margin: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-container {
+  margin-top: 24px;
+  padding-top: 10px;
+  width: calc(80vw + 34px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* svg styles + hover styles */
+
+.branch {
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  transition: transform 1.2s;
+}
+
+.branch .leaf {
+  fill: #fefefe;
+}
+
+.branch-right {
+  right: 2px;
+}
+
+.branch-left {
+  left: 2px;
+}
+
+#romanholiday:hover .branch-right {
+  transform: rotate(12deg);
+}
+
+#romanholiday:hover .branch-left {
+  transform: rotate(-12deg);
+}
+
+#lines { 
+  width: 220%;
+  height: 220%;
+}
+
+.lines #lines path {
+  stroke: #fefefe;
+}
+
+#starmap path {
+  stroke-dashoffset: 400px;
+  stroke-dasharray: 400px;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.starchart:hover #starmap path {
+  stroke-dashoffset: 0;
+}
+
+#Star {
+  transition: stroke-width 1s;
+  transition: r 1s;
+}
+
+.starchart:hover #Star {
+  r: 5px;
+  stroke-width: 4;
+}
+
+.tiny-diamond,
+.medium-diamond {
+  fill: white;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  opacity: 0;
+}
+
+#mousetrap {
+  cursor: url(https://cdn.glitch.com/fbfbe80c-5dab-43e8-81ab-0a353618a87d%2Fmouse.png?v=1574279541232), pointer;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.one {
+  animation: sparkle 0.75s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.four {
+  animation: sparkle 0.5s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.two {
+  animation: sparkle 0.6s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.three {
+  animation: sparkle 1.6s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.four,
+.mousetrap:hover #sparkles .tiny-diamond.seven {
+  animation: sparkle 2s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.five,
+.mousetrap:hover #sparkles .tiny-diamond.eight {
+  animation: sparkle 1.4s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-diamond.six {
+  animation: sparkle 1s infinite;
+}
+
+.mousetrap:hover #sparkles .medium-diamond.one {
+  animation: sparkle 1.2s infinite;
+}
+
+.mousetrap:hover #sparkles .medium-diamond.two {
+  animation: sparkle 2s infinite;
+}
+
+.mousetrap:hover #sparkles .medium-diamond.three {
+  animation: sparkle 0.9s infinite;
+}
+
+.mousetrap:hover #sparkles .tiny-cross {
+  animation: sparkle 1s infinite;
+}
+
+.project.open:hover #mousetrap circle {
+  fill: gold;
+}
+
+.project.open.mousetrap:hover #mousetrap circle {
+  fill: gold;
+}
+
+.project.open.mousetrap:hover #mousetrap .rind {
+  fill: palegoldenrod;
+}
+
+/****** "open" styles  ******/
+
+/* handles mobile text-opening */
+.project.open {
+  height: 128vw;
+  width: 70vw;
+  align-items: flex-end;
+}
+
+.project.open .project-text-box {
+  height: 58vw;
+  border-bottom: #cecec3 2px solid;
+  border-left: #cecec3 2px solid;
+  border-right: #cecec3 2px solid;
+  opacity: 1;
+}
+
+.project.open:hover .project-text-box {
+  border-bottom: goldenrod 2px solid;
+  border-left: goldenrod 2px solid;
+  border-right: goldenrod 2px solid;
+}
+
+.project.open:hover .project-image {
+  background: goldenrod;
+}
+
+/* handles horizontal text-opening */
+.open {
+  width: calc(80vw + 12px);
+}
+
+.open #speaker-large {
+  stroke-width: 6px;
+}
+
+.open:hover #speaker-large {
+  stroke: darkgoldenrod;
+}
+
+.open:hover #speaker-small,
+.open #Oval-6 {
+  fill: palegoldenrod;
+}
+
+.open:hover #Rectangle-6 {
+  fill: palegoldenrod;
+}
+
+#swan circle {
+  stroke: #4e4e4e;
+}
+
+/* wavy - tuning needle */
+@keyframes tuningneedle {
+  5% {
+    transform: translate(-45px, 0px);
+  }
+  30% {
+    transform: translate(100px, 0px);
+  }
+}
+
+.wavy:hover #needle {
+  animation: tuningneedle 10s ease infinite;
+}
+.wavy:hover #speaker-small {
+  animation: speakerbounce 0.75s ease infinite;
+}
+.wavy:hover #speaker-small.onscreen {
+  animation: speakerbounce 0.75s ease infinite;
+}
+
+@keyframes speakerbounce {
+  2% {
+    transform: scale(1.2) translateX(-18px) translateY(-18px);
+    /*     stroke-width: 10; */
+  }
+  5% {
+    transform: scale(1);
+    /*     stroke-width: 11; */
+  }
+  7% {
+    transform: scale(1.1) translateX(-10px) translateY(-10px);
+    /*     stroke-width: 10; */
+  }
+  9% {
+    transform: scale(1);
+    /*     stroke-width: 11; */
+  }
+  12% {
+    transform: scale(1.15) translateX(-16px) translateY(-16px);
+    /*     stroke-width: 10; */
+  }
+  75% {
+    transform: scale(1);
+    /*     stroke-width: 11; */
+  }
+  77% {
+    transform: scale(1.15) translateX(-16px) translateY(-16px);
+    /*     stroke-width: 10; */
+  }
+}
+
+@media (min-width: 385px) {
+  .project-container {
+    justify-content: flex-start;
+  }
+
+  .project.open .project-text-box {
+    border-bottom: #cecec3 2px solid;
+    border-top: #cecec3 2px solid;
+  }
+
+  .project.open.right .project-text-box {
+    border-left: #cecec3 2px solid;
+    border-right: none;
+  }
+
+  .project.open.left .project-text-box {
+    border-right: #cecec3 2px solid;
+    border-left: none;
+  }
+  
+  .project.open:hover .project-text-box {
+    border-bottom: goldenrod 2px solid;
+    border-top: goldenrod 2px solid;
+  }
+
+  .project.open.right:hover .project-text-box {
+    border-left: goldenrod 2px solid;
+    border-right: none;
+  }
+
+  .project.open.left:hover .project-text-box {
+    border-right: goldenrod 2px solid;
+  }
+
+  .project,
+  .project-image,
+  .project-text-box {
+    width: 40vw;
+    max-height: 200px;
+    height: 42vw;
+  }
+
+  .project.open {
+    height: 42vw;
+    width: 80vw;
+  }
+
+  .project.open .project-text-box {
+    height: 42vw;
+    width: 40vw;
+    max-width: 200px;
+  }
+
+  .project.open.right .project-text-box {
+    justify-self: flex-end;
+  }
+
+  .project.open.left .project-text-box {
+    justify-self: flex-end;
+  }
+}
+
+@media (min-width: 620px) {
+  .project-container {
+    width: 82vw;
+    max-width: 420px;
+  }
+
+  .project,
+  .project-image,
+  .project-text {
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .project.open {
+    max-width: 400px;
+  }
+
+  .open {
+    width: calc(40vw + 12px);
+  }
+}
+
+@media (min-width: 760px) {
+  .project-container {
+    max-width: 720px;
+  }
+}
